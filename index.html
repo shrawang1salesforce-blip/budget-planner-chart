@@ -7,9 +7,15 @@
     <title>Budget Planner</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"
+      defer
+    ></script>
     <script src="app.js" defer></script>
   </head>
   <body>
@@ -29,9 +35,10 @@
         <div>
           <p class="eyebrow">YOUR MONTH, AT A GLANCE</p>
           <h1>Make room for what matters.</h1>
-          <p class="intro">A clear picture of your budget, one month at a time.</p>
+          <p class="intro">
+            A clear picture of your budget, one month at a time.
+          </p>
         </div>
-        <span class="welcome-stamp" aria-hidden="true">take it<br />one day<br />at a time</span>
       </section>
 
       <section class="summary-grid" aria-label="Monthly totals">
@@ -72,8 +79,13 @@
             </div>
           </div>
           <div class="chart-wrap">
-            <canvas id="budget-chart" aria-label="Budget compared with spending by category"></canvas>
-            <p id="chart-empty" class="empty-chart">Add a budget to see your month take shape.</p>
+            <canvas
+              id="budget-chart"
+              aria-label="Budget compared with spending by category"
+            ></canvas>
+            <p id="chart-empty" class="empty-chart">
+              Add a budget to see your month take shape.
+            </p>
           </div>
           <div class="chart-legend" aria-hidden="true">
             <span><i class="legend-budget"></i>Budget</span>
@@ -93,18 +105,41 @@
           <form id="budget-form" class="form-grid">
             <label class="field field-wide">
               <span>Category</span>
-              <input id="budget-category" name="category" maxlength="32" placeholder="e.g. Groceries" required />
+              <input
+                id="budget-category"
+                name="category"
+                maxlength="32"
+                placeholder="e.g. Groceries"
+                required
+              />
             </label>
             <label class="field">
               <span>Monthly amount</span>
-              <span class="input-with-prefix"><span>$</span><input id="budget-amount" name="amount" type="number" min="0.01" step="0.01" placeholder="0.00" required /></span>
+              <span class="input-with-prefix"
+                ><span>$</span
+                ><input
+                  id="budget-amount"
+                  name="amount"
+                  type="number"
+                  min="0.01"
+                  step="0.01"
+                  placeholder="0.00"
+                  required
+              /></span>
             </label>
-            <button class="button button-dark" type="submit">Save budget <span aria-hidden="true">+</span></button>
+            <button class="button button-dark" type="submit">
+              Save budget <span aria-hidden="true">+</span>
+            </button>
           </form>
-          <p class="form-hint">Using a category you already have will update its budget.</p>
+          <p class="form-hint">
+            Using a category you already have will update its budget.
+          </p>
         </section>
 
-        <section class="panel form-panel" aria-labelledby="expense-form-heading">
+        <section
+          class="panel form-panel"
+          aria-labelledby="expense-form-heading"
+        >
           <div class="section-heading">
             <div>
               <p class="eyebrow">KEEP TRACK</p>
@@ -114,7 +149,13 @@
           <form id="expense-form" class="form-grid">
             <label class="field field-wide">
               <span>What was it?</span>
-              <input id="expense-description" name="description" maxlength="60" placeholder="e.g. Weekly shop" required />
+              <input
+                id="expense-description"
+                name="description"
+                maxlength="60"
+                placeholder="e.g. Weekly shop"
+                required
+              />
             </label>
             <label class="field">
               <span>Category</span>
@@ -124,19 +165,41 @@
             </label>
             <label class="field">
               <span>Amount</span>
-              <span class="input-with-prefix"><span>$</span><input id="expense-amount" name="amount" type="number" min="0.01" step="0.01" placeholder="0.00" required /></span>
+              <span class="input-with-prefix"
+                ><span>$</span
+                ><input
+                  id="expense-amount"
+                  name="amount"
+                  type="number"
+                  min="0.01"
+                  step="0.01"
+                  placeholder="0.00"
+                  required
+              /></span>
             </label>
             <label class="field">
               <span>Date</span>
               <input id="expense-date" name="date" type="date" required />
             </label>
-            <button id="expense-submit" class="button button-coral" type="submit" disabled>Save expense <span aria-hidden="true">+</span></button>
+            <button
+              id="expense-submit"
+              class="button button-coral"
+              type="submit"
+              disabled
+            >
+              Save expense <span aria-hidden="true">+</span>
+            </button>
           </form>
-          <p class="form-hint">Expenses are saved to the month selected above.</p>
+          <p class="form-hint">
+            Expenses are saved to the month selected above.
+          </p>
         </section>
       </section>
 
-      <section class="panel transactions-panel" aria-labelledby="transactions-heading">
+      <section
+        class="panel transactions-panel"
+        aria-labelledby="transactions-heading"
+      >
         <div class="section-heading">
           <div>
             <p class="eyebrow">RECENT ACTIVITY</p>
@@ -147,15 +210,25 @@
         <div class="table-scroll">
           <table>
             <thead>
-              <tr><th scope="col">Expense</th><th scope="col">Category</th><th scope="col">Date</th><th scope="col" class="amount-cell">Amount</th><th scope="col"><span class="visually-hidden">Remove</span></th></tr>
+              <tr>
+                <th scope="col">Expense</th>
+                <th scope="col">Category</th>
+                <th scope="col">Date</th>
+                <th scope="col" class="amount-cell">Amount</th>
+                <th scope="col"><span class="visually-hidden">Remove</span></th>
+              </tr>
             </thead>
             <tbody id="expense-list"></tbody>
           </table>
-          <p id="expense-empty" class="empty-table">Nothing logged yet. Your expenses will show up here.</p>
+          <p id="expense-empty" class="empty-table">
+            Nothing logged yet. Your expenses will show up here.
+          </p>
         </div>
       </section>
 
-      <footer class="footer"><span>Pocket</span><span>Your budget stays on this device.</span></footer>
+      <footer class="footer">
+        <span>Pocket</span><span>Your budget stays on this device.</span>
+      </footer>
     </main>
   </body>
 </html>
